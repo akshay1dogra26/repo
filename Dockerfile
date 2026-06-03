@@ -5,10 +5,10 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /app
 
 # Copy source code
-COPY HelloWorld.java .
+COPY src/HelloWorldProject/*.java .
 
 # Compile the Java program
-RUN javac HelloWorld.java
+RUN javac *.java
 
 # Run the program
-CMD ["java", "HelloWorld"]
+CMD ["java", "HelloWorldClass"]
